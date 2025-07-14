@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Employee Directory</h1>
+    <div class="toolbar">
+      <input type="text" id="searchInput" placeholder="Search by name or email...">
+      <button id="filterToggle">Filter</button>
+      <div class="sort-options">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="">None</option>
+          <option value="firstName">First Name (A-Z)</option>
+          <option value="department">Department (A-Z)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <aside id="filterSidebar">
+    <h3>Filter Employees</h3>
+    <label>
+      First Name:
+      <input type="text" id="filterFirstName">
+    </label>
+    <label>
+      Department:
+      <input type="text" id="filterDepartment">
+    </label>
+    <label>
+      Role:
+      <input type="text" id="filterRole">
+    </label>
+    <button id="applyFilter">Apply</button>
+    <button id="clearFilter">Clear</button>
+  </aside>
+
+  <main>
+    <div class="employee-grid">
+      <!-- Rendered with JS -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="pagination-controls">
+      <label for="perPage">Items per page:</label>
+      <select id="perPage">
+        <option>10</option>
+        <option>25</option>
+        <option>50</option>
+        <option>100</option>
+      </select>
+      <div id="pagination"></div>
+    </div>
+  </footer>
+
+  <script src="/static/javascript/app.js"></script>
+</body>
+</html>

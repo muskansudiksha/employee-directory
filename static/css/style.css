@@ -1,0 +1,163 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    background-color: #1f2937;
+    color: white;
+    padding: 1rem;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  /* Toolbar */
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+  
+  .toolbar input[type="text"] {
+    padding: 0.5rem;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .sort-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .sort-options select {
+    padding: 0.4rem;
+  }
+  
+  /* Filter Sidebar */
+  #filterSidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    padding: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #filterSidebar.visible {
+    left: 0;
+  }
+  
+  #filterSidebar label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  #filterSidebar input {
+    width: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+  }
+  
+  #filterSidebar button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Employee Grid */
+  .employee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .employee-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .employee-card p {
+    margin: 0.3rem 0;
+  }
+  
+  .employee-card button {
+    margin-right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .employee-card button:last-child {
+    background-color: #dc2626;
+  }
+  
+  /* Pagination */
+  footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination-controls select {
+    padding: 0.4rem;
+  }
+  
+  #pagination button {
+    margin: 0 0.25rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #pagination button.active {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .employee-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    #filterSidebar {
+      width: 100%;
+    }
+  }
+  
